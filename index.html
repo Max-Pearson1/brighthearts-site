@@ -105,7 +105,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 40%;
+      object-position: center 50%;
     }
 
     .hero-overlay {
@@ -192,16 +192,12 @@
     }
 
     .ticket-embed {
-      background-color: #ffffff;
-      border-radius: 0.5rem;
+      background-color: rgba(255, 255, 255, 0.03);
+      border-radius: 0.75rem;
       overflow: hidden;
       margin-bottom: 2rem;
-    }
-
-    .ticket-embed iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1rem;
     }
 
     .tickets-note {
@@ -300,9 +296,9 @@
     <div class="about-container">
       <h2>About Brighthearts</h2>
       <p>
-        Brighthearts is a live performance and events brand dedicated to creating memorable 
-        80s-themed experiences through music and entertainment. We bring together talented performers and 
-        passionate audiences for nights filled with energy, emotion, and connection. Every event 
+        Brighthearts is a live performance and events brand dedicated to creating memorable
+        80s-themed experiences through music and entertainment. We bring together talented performers and
+        passionate audiences for nights filled with energy, emotion, and connection. Every event
         is crafted to deliver an atmosphere that stays with you long after the final note.
       </p>
     </div>
@@ -313,15 +309,11 @@
     <div class="tickets-container">
       <h2>Secure your tickets now</h2>
       <p>Limited availability. Don't miss your chance to be part of something special.</p>
-      
+
       <div class="ticket-embed">
-        <iframe 
-          src="https://www.ticketsource.com/thebrighthearts" 
-          title="Brighthearts Tickets - TicketSource"
-          allow="payment">
-        </iframe>
+        <div id="embedTS_EGJDHM" style="width:100%;"></div>
       </div>
-      
+
       <p class="tickets-note">Tickets provided by TicketSource</p>
     </div>
   </section>
@@ -338,5 +330,14 @@
       <span class="copyright">&copy; 2025 Brighthearts. All rights reserved.</span>
     </div>
   </footer>
+
+  <script type="text/javascript">
+    (function() {
+      var el = document.createElement("script");
+      el.src = "https://www.ticketsource.com/ticketshop/EGJDHM";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(el, s);
+    })();
+  </script>
 </body>
 </html>
