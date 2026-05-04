@@ -253,9 +253,9 @@
     .hero-inner {
       width: min(calc(100% - 2rem), var(--max));
       margin: 0 auto;
-      padding: 9rem 0 4rem;
+      padding: 8rem 0 4rem;
       display: grid;
-      grid-template-columns: 1.18fr 0.82fr;
+      grid-template-columns: 1fr;
       gap: 2rem;
       align-items: end;
     }
@@ -265,9 +265,9 @@
     }
 
     .hero h1 {
-      font-size: clamp(2.85rem, 8.2vw, 6.1rem);
-      line-height: 0.93;
-      letter-spacing: -0.07em;
+      font-size: clamp(2.25rem, 6.2vw, 4.9rem);
+      line-height: 0.94;
+      letter-spacing: -0.065em;
       margin-bottom: 1.25rem;
       text-wrap: balance;
       text-shadow: 0 10px 30px rgba(0,0,0,0.32);
@@ -287,77 +287,121 @@
       margin-bottom: 2rem;
     }
 
-    .hero-card {
-      justify-self: end;
-      width: min(100%, 380px);
-      background: rgba(10,10,16,0.55);
-      border: 1px solid rgba(255,255,255,0.1);
-      backdrop-filter: blur(12px);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-      box-shadow: var(--shadow);
-      transform: translateY(20px);
+    
+
+    .hero-inner-featured {
+      align-items: center;
+      padding-top: 8.5rem;
+      padding-bottom: 4.5rem;
     }
 
-    .hero-card-label {
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--soft);
-      margin-bottom: 0.8rem;
-    }
-
-    .hero-card-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      line-height: 1.15;
-    }
-
-    .hero-card-meta {
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
-    .show-banner-section {
-      padding: 3rem 0 0;
-      margin-top: -1px;
-      background: linear-gradient(to bottom, rgba(7,7,11,1), rgba(7,7,11,0));
-    }
-
-    .show-banner {
-      position: relative;
+    .hero-show-banner {
+      width: min(100%, 980px);
+      margin-bottom: 1.1rem;
+      border-radius: 28px;
       overflow: hidden;
-      border-radius: 26px;
-      border: 1px solid rgba(255,255,255,0.1);
-      background: linear-gradient(135deg, rgba(34,166,255,0.18), rgba(255,47,125,0.1));
-      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.14);
+      background: linear-gradient(135deg, rgba(34,166,255,0.22), rgba(255,47,125,0.12));
+      box-shadow: 0 26px 80px rgba(0,0,0,0.42);
     }
 
-    .show-banner img {
+    .hero-show-banner img {
       width: 100%;
       height: auto;
     }
 
-    .show-banner-fallback {
+    .hero-fallback {
       display: none;
-      padding: clamp(1.4rem, 4vw, 2.5rem);
-      background: linear-gradient(135deg, rgba(34,166,255,0.75), rgba(19,28,68,0.9));
+      padding: clamp(1.5rem, 4vw, 3rem);
+      background: linear-gradient(135deg, rgba(34,166,255,0.82), rgba(19,28,68,0.96));
     }
 
-    .show-banner-fallback h2 {
-      font-size: clamp(2rem, 5vw, 4.2rem);
-      line-height: 0.95;
-      letter-spacing: -0.055em;
+    .hero-fallback h2 {
+      font-size: clamp(2.4rem, 7vw, 5.8rem);
+      line-height: 0.92;
+      letter-spacing: -0.065em;
     }
 
-    .show-banner-fallback p {
+    .hero-fallback p {
       color: rgba(255,255,255,0.86);
       margin-top: 0.8rem;
       font-size: 1.05rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.04em;
+    }
+
+    .hero-promo-line {
+      margin-bottom: 1.5rem;
+    }
+
+    .rich-copy p + p {
+      margin-top: 1rem;
+    }
+
+    .rich-copy strong {
+      color: #fff;
+    }
+
+    .dress-code-card {
+      margin-top: 2rem;
+      max-width: 720px;
+      padding: 1.6rem;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.1);
+      background: linear-gradient(135deg, rgba(255,47,125,0.16), rgba(34,166,255,0.12));
+      box-shadow: var(--shadow);
+    }
+
+    .dress-code-label {
+      display: inline-flex;
+      margin-bottom: 0.75rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.78);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .dress-code-card h3 {
+      font-size: clamp(1.5rem, 3vw, 2.35rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.55rem;
+    }
+
+    .dress-code-card p {
+      color: rgba(255,255,255,0.78);
+    }
+
+    .tickets-heading {
+      margin-bottom: 1rem;
+    }
+
+    .contact-grid-simple {
+      grid-template-columns: minmax(0, 760px);
+    }
+
+    .together-panel {
+      max-width: 850px;
+      margin: -2rem auto 0;
+      text-align: center;
+    }
+
+    .together-panel h3 {
+      font-size: clamp(1.65rem, 3vw, 2.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.85rem;
+    }
+
+    .together-panel p {
+      color: var(--muted);
+      font-size: 1.05rem;
     }
 
     .about-grid,
@@ -525,15 +569,7 @@
       max-width: 470px;
     }
 
-    .who-number {
-      display: inline-block;
-      font-size: clamp(4rem, 10vw, 8rem);
-      line-height: 0.9;
-      letter-spacing: -0.08em;
-      color: rgba(255,255,255,0.08);
-      margin-bottom: 0.35rem;
-      font-weight: 800;
-    }
+    
 
     .who-role {
       display: inline-flex;
@@ -721,39 +757,29 @@
       </div>
       <div class="hero-overlay"></div>
 
-      <div class="hero-inner">
+      <div class="hero-inner hero-inner-featured">
         <div class="hero-copy reveal">
-          <h1>Big voices.<br>Bold energy.<br>Brighthearts.</h1>
-          <span class="show-kicker">Brighthearts presents Hairbrush Hits</span>
-          <div class="promo-line" aria-label="Show slogans">
+          <div class="hero-show-banner">
+            <img src="hairbrush-hits-header.jpg" alt="The Brighthearts presents Hairbrush Hits Ultimate 80s Party Events" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <div class="show-banner-fallback hero-fallback">
+              <h2>The Brighthearts presents Hairbrush Hits</h2>
+              <p>Ultimate 80s party events</p>
+            </div>
+          </div>
+
+          <div class="promo-line hero-promo-line" aria-label="Show slogans">
             <span>Theatre meets party</span>
             <span>Ultimate 80s night</span>
             <span>Sing-out-loud anthems</span>
           </div>
+
+          <h1>Big voices.<br>Bold energy.<br>Brighthearts.</h1>
           <p>
             Get ready for Hairbrush Hits — The Brighthearts’ ultimate 80s party night, celebrating iconic anthems, huge choruses and unforgettable sing-out-loud moments with your favourite people.
           </p>
           <div class="hero-actions">
             <a href="#tickets" class="btn">Book Tickets</a>
-            <a href="#who" class="btn btn-secondary">Meet the Performers</a>
-          </div>
-        </div>
-
-        <div class="hero-card reveal">
-          <div class="hero-card-label">Now booking</div>
-          <div class="hero-card-title">Hairbrush Hits</div>
-          <div class="hero-card-meta">A big, bold, feel-good party night from The Brighthearts.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="show-banner-section">
-      <div class="container">
-        <div class="show-banner reveal">
-          <img src="hairbrush-hits-header.jpg" alt="The Brighthearts presents Hairbrush Hits Ultimate 80s Party Events" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-          <div class="show-banner-fallback">
-            <h2>The Brighthearts presents Hairbrush Hits</h2>
-            <p>Ultimate 80s party events</p>
+            <a href="#who" class="btn btn-secondary">Meet the Singers</a>
           </div>
         </div>
       </div>
@@ -763,47 +789,35 @@
       <div class="container">
         <div class="reveal">
           <span class="eyebrow">About the show</span>
-          <h2 class="section-title">A theatre-meets-party night built for big choruses, big laughs and big memories.</h2>
-          <p class="section-copy">
-            Hairbrush Hits is a high-energy Brighthearts show packed with nostalgic favourites, feel-good performance and the kind of songs people cannot resist singing along to. It is polished enough for a proper night out, but lively enough to feel like a party from the first number.
-          </p>
+          <h2 class="section-title">The ultimate singalong party night out.</h2>
+          <div class="section-copy rich-copy">
+            <p><strong>THE BRIGHTHEARTS</strong> are bringing their ultimate singalong party night out to a venue near you!</p>
+            <p>There are certain songs that come on the radio and you just want to grab a hairbrush and sing your heart out. Introducing <strong>Hairbrush Hits</strong> — think classic 80s tunes by artists like Madonna, Bon Jovi and MJ.</p>
+            <p>The thing is… girls just wanna have fun, don’t they? Gather your tribe. This is going to be a night not to be missed.</p>
+          </div>
         </div>
 
-        <div class="about-grid">
-          <div class="glass-panel about-panel reveal">
-            <h3>Big promo energy</h3>
-            <p>
-              Bright colours, bold vocals and instantly recognisable anthems. The show is designed to feel exciting before visitors even arrive at the venue.
-            </p>
-          </div>
-          <div class="glass-panel about-panel reveal">
-            <h3>Made for audiences</h3>
-            <p>
-              Expect huge choruses, familiar favourites and a room full of people singing the songs they secretly already know every word to.
-            </p>
-          </div>
+        <div class="dress-code-card reveal">
+          <span class="dress-code-label">Dress code</span>
+          <h3>80s dress-up encouraged</h3>
+          <p>Leg warmers, neon, denim, big hair, leather jackets — come ready for the party.</p>
         </div>
       </div>
     </section>
 
     <section id="tickets" class="section">
       <div class="container">
-        <div class="reveal">
-          <span class="eyebrow">Tickets</span>
-          <h2 class="section-title">Secure your place</h2>
-          <p class="section-copy">
-            Book directly below. Keep it simple, keep it quick.
-          </p>
-        </div>
-
-        <div class="tickets-wrap">
+        <div class="tickets-wrap tickets-wrap-clean">
           <div class="glass-panel tickets-copy-panel reveal">
-            <h3 style="font-size:1.35rem; margin-bottom:0.85rem; letter-spacing:-0.03em;">Why book now</h3>
+            <h2 class="section-title tickets-heading">Book Now</h2>
             <p style="color:var(--muted);">
-              Hairbrush Hits is made for groups, big nights out and anyone who wants a proper feel-good evening. Bring your favourite people, expect the classics, and prepare for the choruses everyone joins in with.
+              Hairbrush Hits is the perfect excuse to get together with your favourite people and enjoy a great night ‘out-out’ and a proper feel-good evening. Expect big tunes and choruses everyone joins in with.
             </p>
             <p style="color:var(--muted);">
-              One clean destination for the whole event.
+              By the way… The Brighthearts accept no responsibility for sore feet from too much dancing and sore throats from too much singing along!
+            </p>
+            <p style="color:var(--muted);">
+              Find event details and tickets here.
             </p>
             <div style="margin-top:1.25rem;">
               <a href="https://www.ticketsource.com/thebrighthearts" target="_blank" rel="noopener noreferrer" class="btn">
@@ -827,16 +841,12 @@
           <span class="eyebrow">Contact</span>
           <h2 class="section-title">Contact The Brighthearts</h2>
           <p class="section-copy">
-            For bookings, event questions, venue enquiries or general messages, use the contact details below.
+            For event enquiries, bookings or general messages, contact us below.
           </p>
         </div>
 
-        <div class="contact-grid">
+        <div class="contact-grid contact-grid-simple">
           <div class="glass-panel contact-panel reveal">
-            <h3>Get in touch</h3>
-            <p>
-              Add your preferred public contact details here. I have left placeholders where you can drop in your email, phone number or enquiry form link.
-            </p>
             <div class="contact-list">
               <div class="contact-item">
                 <strong>Email</strong>
@@ -844,18 +854,12 @@
               </div>
               <div class="contact-item">
                 <strong>Facebook</strong>
-                <a href="https://www.facebook.com/share/1DRSwaxVms/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Message on Facebook</a>
+                <a href="https://www.facebook.com/share/1DRSwaxVms/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Message us</a>
               </div>
-            </div>
-          </div>
-
-          <div class="glass-panel contact-panel reveal">
-            <h3>Event enquiries</h3>
-            <p>
-              Planning a venue night, community event, private function or themed party? Send the details across and The Brighthearts can respond with availability and options.
-            </p>
-            <div style="margin-top:1.25rem;">
-              <a href="mailto:hello@brighthearts.co.uk?subject=Brighthearts%20Event%20Enquiry" class="btn btn-secondary">Send an Enquiry</a>
+              <div class="contact-item">
+                <strong>YouTube</strong>
+                <a href="https://youtube.com/@hairbrushhits?si=uMrgFFfN44yHAEdw" target="_blank" rel="noopener noreferrer">Watch Hairbrush Hits</a>
+              </div>
             </div>
           </div>
         </div>
@@ -865,34 +869,14 @@
     <section id="who" class="section">
       <div class="container">
         <div class="reveal">
-          <span class="eyebrow">Who’s Who</span>
-          <h2 class="section-title">Meet the performers</h2>
+          <span class="eyebrow">Meet The Singers</span>
+          <h2 class="section-title">The voices behind The Brighthearts</h2>
           <p class="section-copy">
-            Two distinct performers, two different energies, one polished live show.
+            Together, Becky Gosling and Sarah Riches bring seamless harmonies, stage chemistry and feel-good joy to every Hairbrush Hits show.
           </p>
         </div>
 
         <div class="who-blocks">
-          <article class="who-row">
-            <div class="who-image-wrap reveal">
-              <div class="who-image-card">
-                <img src="becky.jpg" alt="Becky Gosling performing live on stage" />
-              </div>
-            </div>
-            <div class="who-copy reveal">
-              <span class="who-number">01</span><br>
-              <span class="who-role">Performer</span>
-              <h3 class="who-name">Becky<br>Gosling</h3>
-              <p class="who-description">
-                Becky brings brightness, warmth and a natural audience connection to the stage. Her presence feels immediate — polished enough to carry the show, but open enough to keep it lively and personal.
-              </p>
-              <p class="who-description">
-                She gives the night lift, colour and momentum, creating the kind of atmosphere that pulls the room in quickly and keeps the energy up.
-              </p>
-              <span class="who-tagline">High-energy stage presence</span>
-            </div>
-          </article>
-
           <article class="who-row reverse">
             <div class="who-image-wrap reveal">
               <div class="who-image-card">
@@ -900,18 +884,37 @@
               </div>
             </div>
             <div class="who-copy reveal">
-              <span class="who-number">02</span><br>
-              <span class="who-role">Performer</span>
+              <span class="who-role">Singer</span>
               <h3 class="who-name">Sarah<br>Riches</h3>
               <p class="who-description">
-                Sarah brings a more dramatic edge; strong vocal presence, striking delivery, and a look that gives the performance real shape. She adds weight and contrast, making the overall show feel bigger and more complete.
+                Sarah Riches delivers stunning, rich vocals with elegance and strength night after night. An accomplished singer-songwriter in her own right, she brings creativity, artistry and a distinctive musical style to the show.
               </p>
-              <p class="who-description">
-                The result is a performer who doesn’t just fill the stage, but defines it — adding depth, power and a sense of occasion to the night.
-              </p>
-              <span class="who-tagline">Commanding vocal presence</span>
+              <span class="who-tagline">Elegance, strength and artistry</span>
             </div>
           </article>
+
+          <article class="who-row">
+            <div class="who-image-wrap reveal">
+              <div class="who-image-card">
+                <img src="becky.jpg" alt="Becky Gosling performing live on stage" />
+              </div>
+            </div>
+            <div class="who-copy reveal">
+              <span class="who-role">Singer</span>
+              <h3 class="who-name">Becky<br>Gosling</h3>
+              <p class="who-description">
+                Becky Gosling brings powerhouse vocals, quick wit and infectious energy to the stage. With her natural warmth and sparkling stage presence, she creates an instant connection with audiences, making every performance feel like a night out with friends.
+              </p>
+              <span class="who-tagline">Powerhouse vocals and infectious energy</span>
+            </div>
+          </article>
+
+          <div class="glass-panel together-panel reveal">
+            <h3>Together as The Brighthearts</h3>
+            <p>
+              Together, their seamless harmonies and undeniable on-stage chemistry create an unforgettable experience. As The Brighthearts, their mission is simple: to help audiences forget their worries, sing at the top of their lungs, and share a night of pure, feel-good joy.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -922,6 +925,7 @@
       <div>© Brighthearts 2026</div>
       <div class="socials">
         <a href="https://www.facebook.com/share/1DRSwaxVms/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://youtube.com/@hairbrushhits?si=uMrgFFfN44yHAEdw" target="_blank" rel="noopener noreferrer">YouTube</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
