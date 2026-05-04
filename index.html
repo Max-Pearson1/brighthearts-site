@@ -295,40 +295,80 @@
       padding-bottom: 4.5rem;
     }
 
-    .hero-show-banner {
+    .hero-show-title {
       width: min(100%, 980px);
-      margin-bottom: 1.1rem;
-      border-radius: 28px;
+      margin-bottom: 1.15rem;
+      padding: clamp(1.6rem, 4vw, 3rem) clamp(1.2rem, 4vw, 3.4rem);
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(34,166,255,0.42), transparent 38%),
+        radial-gradient(circle at 85% 25%, rgba(255,47,125,0.28), transparent 35%),
+        linear-gradient(135deg, rgba(9,22,50,0.74), rgba(18,12,38,0.72));
+      box-shadow: 0 28px 90px rgba(0,0,0,0.45);
+      backdrop-filter: blur(10px);
+      position: relative;
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: linear-gradient(135deg, rgba(34,166,255,0.22), rgba(255,47,125,0.12));
-      box-shadow: 0 26px 80px rgba(0,0,0,0.42);
     }
 
-    .hero-show-banner img {
-      width: 100%;
-      height: auto;
+    .hero-show-title::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.08) 45%, transparent 70%),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 18px);
+      pointer-events: none;
     }
 
-    .hero-fallback {
-      display: none;
-      padding: clamp(1.5rem, 4vw, 3rem);
-      background: linear-gradient(135deg, rgba(34,166,255,0.82), rgba(19,28,68,0.96));
+    .hero-show-brand,
+    .hero-show-presents,
+    .hero-show-main,
+    .hero-show-subtitle {
+      position: relative;
+      z-index: 1;
+      text-align: center;
     }
 
-    .hero-fallback h2 {
-      font-size: clamp(2.4rem, 7vw, 5.8rem);
-      line-height: 0.92;
-      letter-spacing: -0.065em;
-    }
-
-    .hero-fallback p {
-      color: rgba(255,255,255,0.86);
-      margin-top: 0.8rem;
-      font-size: 1.05rem;
-      font-weight: 700;
+    .hero-show-brand {
+      font-size: clamp(1.6rem, 4.1vw, 3.25rem);
+      line-height: 0.95;
+      font-weight: 950;
+      letter-spacing: -0.04em;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      color: #fff;
+      text-shadow: 0 4px 0 rgba(255,47,125,0.72), 0 16px 34px rgba(0,0,0,0.38);
+    }
+
+    .hero-show-presents {
+      margin: 0.45rem 0 0.25rem;
+      color: rgba(255,255,255,0.86);
+      font-size: clamp(0.9rem, 1.4vw, 1.15rem);
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .hero-show-main {
+      font-size: clamp(3rem, 9vw, 7.2rem);
+      line-height: 0.88;
+      font-weight: 1000;
+      letter-spacing: -0.075em;
+      text-transform: uppercase;
+      color: #fff;
+      text-shadow:
+        0 5px 0 rgba(255,47,125,0.9),
+        0 9px 0 rgba(34,166,255,0.36),
+        0 24px 45px rgba(0,0,0,0.42);
+    }
+
+    .hero-show-subtitle {
+      margin-top: 0.85rem;
+      color: rgba(255,255,255,0.93);
+      font-size: clamp(1.05rem, 2.2vw, 1.75rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
     }
 
     .hero-promo-line {
@@ -759,12 +799,11 @@
 
       <div class="hero-inner hero-inner-featured">
         <div class="hero-copy reveal">
-          <div class="hero-show-banner">
-            <img src="hairbrush-hits-header.jpg" alt="The Brighthearts presents Hairbrush Hits Ultimate 80s Party Events" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-            <div class="show-banner-fallback hero-fallback">
-              <h2>The Brighthearts presents Hairbrush Hits</h2>
-              <p>Ultimate 80s party events</p>
-            </div>
+          <div class="hero-show-title" aria-label="The Brighthearts presents Hairbrush Hits ultimate 80s party anthems">
+            <div class="hero-show-brand">The Brighthearts</div>
+            <div class="hero-show-presents">presents</div>
+            <div class="hero-show-main">Hairbrush Hits!</div>
+            <div class="hero-show-subtitle">Ultimate 80s party anthems</div>
           </div>
 
           <div class="promo-line hero-promo-line" aria-label="Show slogans">
